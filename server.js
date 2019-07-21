@@ -11,7 +11,7 @@ app.use (
     bodyParser.urlencoded({
         extended: false
     })
-);ok
+);
 
 // path to public folder
 app.use(express.static(process.cwd() + "/public"));
@@ -28,6 +28,8 @@ db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
   console.log("Connected to Mongoose!");
 });
+
+// mongoose exercise 20 copy that info
 
 var port = process.env.PORT || 3000;
 app.listen(port, function (){
